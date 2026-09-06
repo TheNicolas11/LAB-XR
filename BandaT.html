@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/aframe@1.4.1/dist/aframe-master.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+      <!-- ===== BANDA TRANSPORTADORA ===== -->
+      <a-entity id="banda" position="-3 0 -5">
+    
+        <!-- Superficie de la banda -->
+        <a-box position="0 1 0" width="4" height="0.1" depth="1" color="#333333"></a-box>
+    
+        <!-- Patas de soporte -->
+        <a-cylinder position="-1.7 0.5 0" radius="0.1" height="1" color="#555555"></a-cylinder>
+        <a-cylinder position="1.7 0.5 0" radius="0.1" height="1" color="#555555"></a-cylinder>
+    
+        <!-- Rodillos en los extremos -->
+        <a-cylinder position="-2 1 0" radius="0.15" height="1.1" rotation="0 0 90" color="#888888"></a-cylinder>
+        <a-cylinder position="2 1 0" radius="0.15" height="1.1" rotation="0 0 90" color="#888888"></a-cylinder>
+    
+        <!-- Caja de producto sobre la banda -->
+        <a-box position="0 1.25 0" width="0.4" height="0.4" depth="0.4" color="#B87333"></a-box>
+    
+      </a-entity>
+    
+      <!-- ===== TANQUE DE ALMACENAMIENTO ===== -->
+      <a-entity id="tanque" position="3 0 -5">
+    
+        <!-- Cuerpo del tanque -->
+        <a-cylinder position="0 1 0" radius="1" height="2" color="#4CC3D9"></a-cylinder>
+    
+        <!-- Tapa superior -->
+        <a-cylinder position="0 2.05 0" radius="1" height="0.1" color="#2A8A9E"></a-cylinder>
+    
+        <!-- Indicador de nivel (sensor) -->
+        <a-sphere position="1.05 1.5 0" radius="0.1" color="#FF0000"></a-sphere>
+    
+      </a-entity>
+    
+      <!-- ===== PISO Y CIELO ===== -->
+      <a-plane rotation="-90 0 0" width="20" height="20" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+    
+    </a-scene>
+  </body>
+</html>
